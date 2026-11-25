@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Julien – Page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="entete">
-    <a class="logo" href="index.html">Julien</a>
+    <a class="logo" href="index.html">
+      <span class="logo-symbole" aria-hidden="true">jl.</span>
+      <span>Julien <span class="code-commentaire">/ étudiant en informatique</span></span>
+    </a>
     <nav aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
-      <a href="page.html" aria-current="page">Page</a>
+      <a href="page.html" aria-current="page">Expérience</a>
+      <a href="jeux.html">Jeux</a>
       <a href="portfolio.html">Portfolio</a>
     </nav>
   </header>
@@ -24,7 +28,10 @@
       <a class="bouton secondaire" href="index.html">Retour à l’accueil</a>
     </div>
   </main>
-  <footer class="pied">© <span data-annee></span> Julien</footer>
-  <script src="script.js"></script>
+  <footer class="pied">
+    <span>Apprendre par la pratique.</span>
+    <span>© <span data-annee></span> Julien</span>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jouez au Morpion et au Puissance 4 à deux, en local.">
+  <title>Julien | Mini-jeux</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="entete">
+    <a class="logo" href="index.html">
+      <span class="logo-symbole" aria-hidden="true">jl.</span>
+      <span>Julien <span class="code-commentaire">/ étudiant en informatique</span></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="page.html">Expérience</a>
+      <a href="jeux.html" aria-current="page">Jeux</a>
+      <a href="portfolio.html">Portfolio</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Jeux en local</h1>
+    <p class="intro jeux-intro">
+      Deux classiques à partager sur le même écran : choisissez votre jeu et jouez à tour de rôle.
+    </p>
+
+    <div class="jeux-selecteur" role="group" aria-label="Choisir un jeu">
+      <button type="button" data-jeu-select="morpion" aria-pressed="true">Morpion</button>
+      <button type="button" data-jeu-select="puissance4" aria-pressed="false">Puissance 4</button>
+    </div>
+
+    <section
+      class="jeu-panneau"
+      data-jeu-panel="morpion"
+      aria-labelledby="titre-morpion"
+    >
+      <div class="jeu-carte">
+        <div class="jeu-entete">
+          <div>
+            <h2 id="titre-morpion">Morpion</h2>
+            <p class="jeu-instructions">Alignez trois symboles pour gagner.</p>
+          </div>
+          <p class="jeu-statut" data-morpion-statut data-joueur="1" aria-live="polite">
+            Tour du joueur 1 — X
+          </p>
+        </div>
+
+        <div class="morpion-grille" role="group" aria-label="Grille du Morpion">
+          <button class="morpion-case" type="button" data-case="0" aria-label="Ligne 1, colonne 1"></button>
+          <button class="morpion-case" type="button" data-case="1" aria-label="Ligne 1, colonne 2"></button>
+          <button class="morpion-case" type="button" data-case="2" aria-label="Ligne 1, colonne 3"></button>
+          <button class="morpion-case" type="button" data-case="3" aria-label="Ligne 2, colonne 1"></button>
+          <button class="morpion-case" type="button" data-case="4" aria-label="Ligne 2, colonne 2"></button>
+          <button class="morpion-case" type="button" data-case="5" aria-label="Ligne 2, colonne 3"></button>
+          <button class="morpion-case" type="button" data-case="6" aria-label="Ligne 3, colonne 1"></button>
+          <button class="morpion-case" type="button" data-case="7" aria-label="Ligne 3, colonne 2"></button>
+          <button class="morpion-case" type="button" data-case="8" aria-label="Ligne 3, colonne 3"></button>
+        </div>
+
+        <div class="jeu-actions">
+          <span class="jeu-legende">Joueur 1 : X · Joueur 2 : O</span>
+          <button class="jeu-rejouer" type="button" data-morpion-rejouer>Rejouer</button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="jeu-panneau"
+      data-jeu-panel="puissance4"
+      aria-labelledby="titre-puissance4"
+      hidden
+    >
+      <div class="jeu-carte">
+        <div class="jeu-entete">
+          <div>
+            <h2 id="titre-puissance4">Puissance 4</h2>
+            <p class="jeu-instructions">Alignez quatre pions dans une colonne, une ligne ou une diagonale.</p>
+          </div>
+          <p class="jeu-statut" data-puissance-statut data-joueur="1" aria-live="polite">
+            Tour du joueur 1 — vert
+          </p>
+        </div>
+
+        <div
+          class="puissance-grille"
+          data-puissance-grille
+          role="group"
+          aria-label="Plateau de Puissance 4, 7 colonnes par 6 lignes"
+        ></div>
+
+        <div class="jeu-actions">
+          <span class="jeu-legende">Joueur 1 : vert · Joueur 2 : blanc</span>
+          <button class="jeu-rejouer" type="button" data-puissance-rejouer>Rejouer</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <span>© <span data-annee></span> Julien</span>
+    <span>Apprendre par la pratique.</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/jeux.js"></script>
+</body>
+</html>

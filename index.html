@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Le site de Julien, étudiant en informatique et passionné par le développement.">
   <title>Julien | Développement informatique</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="entete">
     <a class="logo" href="index.html">
-      <span class="logo-symbole" aria-hidden="true">jl.</span>
       <span>Julien <span class="code-commentaire">/ étudiant en informatique</span></span>
     </a>
     <nav aria-label="Navigation principale">
@@ -23,7 +21,6 @@
   <main>
     <section class="accueil-hero" aria-labelledby="titre-principal">
       <div class="accueil-contenu">
-        <p class="surtitre">Étudiant en informatique</p>
         <h1 id="titre-principal">
           Apprentissage<br>
           <span class="titre-accent">&amp; Projets<br>techniques</span>
@@ -39,15 +36,7 @@
           <a class="bouton secondaire" href="page.html">
             Mon expérience
           </a>
-        </div>
-        <ul class="mots-cles" aria-label="Centres d’intérêt">
-          <li>développement</li>
-          <li>serveurs</li>
-          <li>réseaux</li>
-          <li>hardware</li>
-          <li>réparations</li>
-          <li>apprentissage continu</li>
-        </ul>
+        </div>  
       </div>
 
       <section class="carte-code" aria-label="Extrait du fichier julien.js">
@@ -57,13 +46,10 @@
         </div>
         <ol class="code" aria-label="Code JavaScript">
           <li>
-            <code><span class="code-cle">const</span> julien = {</code>
+            <code><span class="code-cle">const</span> COMPETENCES = {</code>
           </li>
           <li>
-            <code>&#9;site: <span class="code-valeur">"portfolio"</span>,</code>
-          </li>
-          <li>
-            <code>&#9;explorations: [</code>
+            <code>&#9;domaines: [</code>
           </li>
           <li>
             <code>&#9;&#9;<span class="code-valeur">"Serveurs"</span>,</code>
@@ -98,7 +84,6 @@
   </main>
   <footer class="pied">
     <span>© <span data-annee></span> Julien</span>
-    <span>Apprendre par la pratique.</span>
   </footer>
   <script src="js/script.js"></script>
 </body>
